@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Barra de búsqueda con formulario y resultados</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-dark">
+
+    <div class="container bg-dark text-white mt-0 border rounded p-5 border-primary">
+        <div class="container mt-0">
+            <div class="row">
+                <div class="col-sm-4 p-0">
+                    <h3>Simulador de Inventario</h3>
+                </div>
+                <div class="col-sm-8 p-0">
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2 flex-grow-1">
+                            <label for="inputBusqueda" class="sr-only">Buscar</label>
+                            <input type="text" class="form-control w-100 border-primary" id="inputBusqueda" placeholder="Buscar...">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2 flex-shrink-0">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-0">
+            <div class="col-sm-4">
+                <div class="border rounded border-primary p-4 h-100">
+                    <!-- Aquí irá el formulario -->
+                    <form id="formProducto">
+                        <div class="form-group">
+                          <label for="nombreProducto">Nombre del producto</label>
+                          <input type="text" class="form-control" id="nombreProducto" placeholder="Ingrese el nombre del producto">
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="descripcionProducto">Descripción del producto</label>
+                          <textarea class="form-control" id="descripcionProducto" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="codigoProducto">Código del producto</label>
+                          <input type="text" class="form-control" id="codigoProducto" placeholder="Ingrese el código del producto">
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="precioProducto">Precio del producto</label>
+                          <input type="number" class="form-control" id="precioProducto" placeholder="Ingrese el precio del producto">
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="stockProducto">Cantidad en stock</label>
+                          <input type="number" class="form-control" id="stockProducto" placeholder="Ingrese la cantidad en stock">
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="categoriaProducto">Categoría del producto</label>
+                          <select class="form-control" id="categoriaProducto">
+                            <option>Seleccione una categoría</option>
+                            <option>Electrónica</option>
+                            <option>Ropa y Accesorios</option>
+                            <option>Hogar y Jardín</option>
+                            <option>Salud y Belleza</option>
+                            <option>Alimentos y Bebidas</option>
+                            <option>Otros</option>
+                          </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="imagenProducto">Imagen del producto</label>
+                            <input type="file" class="form-control-file" id="imagenProducto">
+                          </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                      </form>
+                      
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="productos-container border rounded border-primary p-4 h-100">
+                    <!-- Aquí irán los resultados -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
